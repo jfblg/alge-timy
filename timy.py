@@ -26,7 +26,7 @@ class Timy(object):
             ]
     CMDS= ['TIMYINIT', 'EMU0', 'CLR']
 
-    def __init__(self, timeout=720000, logging=True, logfile="timylog.txt", db_uri="sqlite:///timy.db"):
+    def __init__(self, timeout=7200000, logging=True, logfile="timylog.txt", db_uri="sqlite:///timy.db"):
         self.logging = logging
         self.logfile = logfile
         self.timeout = timeout
@@ -88,7 +88,7 @@ class Timy(object):
                     time_received = received.split()
 
                     if len(time_received) == 4:
-                        if time_received[1] == "c1M":
+                        if time_received[1] == "c1" or time_received[1] == "c1M":
                             print(time_received)
                             logging.debug("Received values: %s - %s - %s - %s", *time_received)
                             if self._save_to_db(time_received[2], time_received[3]):
