@@ -3,6 +3,10 @@ import logging
 import time
 
 import usb
+# to run on a MAC, you need to do the follwing:
+# brew install libusb-compat
+# https://stackoverflow.com/questions/3853634/how-to-set-up-libusb-on-mac-os-x
+
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -143,7 +147,8 @@ class Timy(object):
             deltatime = Timy.convert_time_to_delta(timy_time_format)
             record = TimyDbModel(deltatime, order_number)
             self.save(record)
-        except:
+        except Exception as e:
+            print(e)
             return False
 
         return True

@@ -1,5 +1,3 @@
-import os
-import sys
 from sqlalchemy import Column, ForeignKey, Integer, String, Interval
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
@@ -19,5 +17,5 @@ class TimyDbModel(Base):
         self.time_measured = time_measured
         self.order_number = order_number
 
-engine = create_engine('sqlite:////Users/ferojanus/Repos/timy_database/db1.sqlite')
+engine = create_engine('sqlite://///Users/ferojanus/repos/alge-timy/db1.sqlite')
 Base.metadata.create_all(engine)
