@@ -1,6 +1,6 @@
 from timy import Timy
 
-DATABASE_URI = "sqlite:////Users/ferojanus/repos/alge-timy/db1.sqlite"
+DATABASE_URI = "sqlite:////Users/uze/uze-sprinter/TimyDB/db1.sqlite"
 '''
 0011 C0  14:37:22.8549 00
  0011 c0  00:00:00.0169 01
