@@ -17,5 +17,5 @@ class TimyDbModel(Base):
         self.time_measured = time_measured
         self.order_number = order_number
 
-engine = create_engine('sqlite://///Users/ferojanus/repos/alge-timy/db1.sqlite')
+engine = create_engine('sqlite://///Users/uze/uze-sprinter/TimyDB/db1.sqlite')
 Base.metadata.create_all(engine)
